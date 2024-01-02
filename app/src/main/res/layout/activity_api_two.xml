@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".ApiTwoActivity">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="45dp"
+        android:textColor="#E63D76"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:text="In this API\nJust enter a name and it will analyze whether the name is male or female" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="-260dp"
+        android:text="Enter a Name :"
+        android:paddingLeft="30dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="260dp"
+        android:layout_marginLeft="-240dp"
+        android:paddingLeft="50dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:hint="Name........."
+        />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-170dp"
+        android:text="Analyze"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:background="#E91E63"
+        />
+
+    <TextView
+        android:id="@+id/Result"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="450dp"
+        android:layout_marginLeft="-150dp"
+        android:textStyle="bold|italic"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textSize="32dp"
+        android:textColor="#E91E63"
+        android:text="TextView" />
+</androidx.appcompat.widget.LinearLayoutCompat>
