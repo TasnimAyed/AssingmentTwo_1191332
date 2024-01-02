@@ -31,25 +31,20 @@ public class MainActivity extends AppCompatActivity {
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Retrieve stored credentials
                 SharedPreferences sharedPreferences = getSharedPreferences("UserData", Context.MODE_PRIVATE);
                 String savedEmail = sharedPreferences.getString("email", "");
                 String savedPassword = sharedPreferences.getString("password", "");
 
-                // Get entered credentials
                 EditText editTextEmail = findViewById(R.id.Email);
                 EditText editTextPassword = findViewById(R.id.Password);
                 String enteredEmail = editTextEmail.getText().toString();
                 String enteredPassword = editTextPassword.getText().toString();
 
-                // Check if entered credentials match stored credentials
                 if (enteredEmail.equals(savedEmail) && enteredPassword.equals(savedPassword)) {
-                    // Login successful, navigate to HomeActivity
                     Intent intent = new Intent(MainActivity.this, ChooseApiActivity.class);
                     startActivity(intent);
                 } else {
-                    // Show login failed message or handle accordingly
-                    // For example, display a toast message
+
                     Toast.makeText(MainActivity.this, "Login failed", Toast.LENGTH_SHORT).show();
                 }
             }

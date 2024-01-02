@@ -21,23 +21,20 @@ public class SignUpActivity extends AppCompatActivity {
         btnSignUpDone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Get the entered email and password
                 EditText editTextEmail = findViewById(R.id.Email);
                 EditText editTextPassword = findViewById(R.id.Password);
                 String email = editTextEmail.getText().toString();
                 String password = editTextPassword.getText().toString();
 
-                // Save data locally (for example, using SharedPreferences)
                 SharedPreferences sharedPreferences = getSharedPreferences("UserData", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putString("email", email);
                 editor.putString("password", password);
                 editor.apply();
 
-                // Return to MainActivity after signup
                 Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
                 startActivity(intent);
-                finish(); // Close SignUpActivity
+                finish();
             }
         });
 
